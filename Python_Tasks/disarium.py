@@ -1,6 +1,12 @@
 #Create a function that determines whether a number is a Disarium or not.
 
 def disarium(n) :
+    '''Check whether the given number is disarium or not
+
+            Parameters:
+                n (int): any integer
+    '''
+
     length = len(str(n))      #to find length of number
     sum = 0  
     x = n
