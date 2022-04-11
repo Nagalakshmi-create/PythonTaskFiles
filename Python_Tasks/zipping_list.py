@@ -5,4 +5,4 @@ list_2 = ["b", "f", "j"]
 list_3 = ["c", "g", "k"]
 list_4 = ["d", "h", "l"]
 
-print(list(zip(list_1, list_2, list_3, list_4)))
+print(list(zip(list_1, list_2, list_3, list_4)))     #combining lists using zip
