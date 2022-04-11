@@ -1,6 +1,10 @@
 #Create a function that takes an integer n and returns the factorial of factorials ..do it using recursive function
 
 def factorial(n):
+
+    '''
+        returns multiplication of our number with factorial of (number-1)
+    '''
     if n == 0:             # base case
         return 1
      
