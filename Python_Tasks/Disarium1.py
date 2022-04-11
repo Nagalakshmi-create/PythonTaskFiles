@@ -2,12 +2,6 @@
 
 def disarium(n): 
     
-    '''returns whether the given number is disarium not
-        
-        parameters:
-            n (int): integer
-     '''
-    
     num_list = list(n)   
     length = len(num_list)   
     sum = 0
