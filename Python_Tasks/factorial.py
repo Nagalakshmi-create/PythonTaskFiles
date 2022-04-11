@@ -19,5 +19,6 @@ def factoffact(n):
         
     return fact
 
+
 n = int(input("Enter a number: "))
 print(factoffact(n))
