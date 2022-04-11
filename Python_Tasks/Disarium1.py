@@ -4,7 +4,7 @@ def disarium(n):
     
     '''Check whether the given number is disarium or not
     
-            parameters:
+            Parameters:
                 n (int): any integer
     '''
     
