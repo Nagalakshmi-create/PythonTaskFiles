@@ -7,7 +7,7 @@ def disarium(n):
             Parameters:
                 n (int): any integer
     '''
-    
+
     num_list = list(n)   
     length = len(num_list)   
     sum = 0

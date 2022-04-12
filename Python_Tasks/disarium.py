@@ -7,6 +7,7 @@ def disarium(n) :
                 n (int): any integer
     '''
 
+
     length = len(str(n))      #to find length of number
     sum = 0  
     x = n
