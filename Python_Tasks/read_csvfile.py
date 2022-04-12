@@ -20,6 +20,7 @@ for row in data:
 length = len(data_list)
 print("Length of list is: "+str(length))
 
+
 # it copies all the rows except last 2 rows into new file
 for i in range(length-2):    
     writer.writerow(data_list[i]) 
