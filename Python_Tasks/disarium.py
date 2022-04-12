@@ -5,6 +5,10 @@ def disarium(n) :
 
             Parameters:
                 n (int): any integer
+                
+             Return:
+                Returns 0 or 1 --> '0' means not a disarium number
+                                   '1' means disarium number
     '''
 
 
