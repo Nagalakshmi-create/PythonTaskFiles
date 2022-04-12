@@ -6,6 +6,9 @@ def disarium(n):
     
             Parameters:
                 n (int): any integer
+            
+            Return: 
+                returns the given number is disarium or not
     '''
 
     num_list = list(n)   
