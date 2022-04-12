@@ -4,15 +4,13 @@
 import smtplib
 
 sent_from= 'lakshmi73862@gmail.com'
-gmail_password = 'uhfpojsksibkvwwz'
+gmail_password = 'your password'
 
-#to = ['vibha.rawan@neosoftmail.com']
-to=['lakshmi73862@gmail.com']
+to = ['vibha.rawan@neosoftmail.com']
 
-#cc = ["grandheraj68@gmail.com", "radha.maredi@gmail.com"]
-cc = ["grandheraj68@gmail.com"]
-#bcc = ["arun.nadar@neosoftmail.com", "rohan.dhere@neosoftmail.com"]
-bcc=["radha.maredi@gmail.com"]
+cc = ["grandheraj68@gmail.com", "radha.maredi@gmail.com"]
+
+bcc = ["arun.nadar@neosoftmail.com", "rohan.dhere@neosoftmail.com"]
 
 subject = 'Introduction'
 body = 'Hello, Iam Nagalakshmi. This email is sent through Python script.'
