@@ -1,4 +1,4 @@
-#send mail to me through python script
+#send mail through python script
 #keep cc to other two if naga is writing script she will keep radha and shivani in cc
 
 import smtplib
