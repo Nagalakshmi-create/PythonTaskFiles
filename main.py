@@ -3,6 +3,17 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 
 def sentiment_scores(sentence):
+    
+    '''
+       Returns the emotion for our given sentence
+       
+        parameters: 
+            sentence : str
+        
+        Return: 
+            either positive/negative/neutral along with the compound numer
+     '''
+    
     # Create a SentimentIntensityAnalyzer object.
     sid_obj = SentimentIntensityAnalyzer()
 
