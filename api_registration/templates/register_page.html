@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="POST" action="{{url_for('add')}}">
+        <h3>Information</h3>
+        <label>User Name: </label>
+        <input type="text" name ="user_name" />
+        <br/><br/>
+        <label>Email: </label>
+        <input type="email" name ="email" />
+        <br/><br/>
+        <label>Phone Number: </label>
+        <input type="number" name ="ph_no" />
+        <br/><br/>
+        <label>Password: </label>
+        <input type="password" name ="password" />
+        <br/><br/>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
