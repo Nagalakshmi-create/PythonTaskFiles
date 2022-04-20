@@ -56,6 +56,7 @@ def check():
         c = cur.execute(f"SELECT * from details WHERE name='{name}' AND password='{password}';")
         if not c.fetchone():
             return render_template('new.html')
+        
         else:
             return render_template('after_login.html')
     con.close()
