@@ -1,0 +1,88 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="MyCSS/ MyStyle.css" rel="stylesheet">
+        <link href="../HTML/My Images/starimage" rel="icon">
+
+        <!-- inline css issues: no style reuse, less readability : html+css-->
+
+        <style>
+            /* style reuse, good readability: separate CSS in head tag*/
+            ol {
+                color: tomato;
+                text-decoration: underline;
+                font-size: 20px;
+            }
+            /* we cannot reuse same style across the documents*/
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2 style="background-color: red; color: white; text-transform: uppercase; text-align: left; padding: 10px; ">Breakfast</h2>
+            <ol>
+                <li><b>Idly</b></li>
+                <li><i>Upma</i></li>
+                <li>Dosa</li>
+            </ol>
+            <ol type="A">      <!--1     A,a,I,i-->   
+                <li><b>Idly</b></li>
+                <li><i>Upma</i></li>
+                <li>Dosa</li>
+            </ol>
+            <ol reversed>
+                <li><b>Idly</b></li>
+                <li><i>Upma</i></li>
+                <li>Dosa</li>
+            </ol>
+            <ol start="6">
+                <li><b>Idly</b></li>
+                <li><i>Upma</i></li>
+                <li>Dosa</li>
+            </ol>
+            <ol type="a", start="4">    <!--start always takes number-->
+                <li><b>Idly</b></li>
+                <li><i>Upma</i></li>
+                <li>Dosa</li>
+            </ol>
+        </div>
+        <div>
+            <h2>ColdDrinks</h2>
+            <ul>               <!--disc       circle, sauare-->
+                <li>Fanta</li>
+                <li>Pepsi</li>
+                <li>Thums Up</li>
+
+            </ul>
+            <ul type="circle">
+                <li>Fanta</li>
+                <li>Pepsi</li>
+                <li>Thums Up</li>
+            </ul>
+            <ul type="square">
+                <li>Fanta</li>
+                <li>Pepsi</li>
+                <li>Thums Up</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Java Syllabus</h2>
+            <ul>
+                <li>Core Java</li>
+                <li>Advanced Java</li>
+                <li>Java Framework 
+                    <ol>
+                        <li>Hibernate</li>
+                        <li>Spring MVC</li>
+                        <li>Spring Boot</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        </body>
+        </html>

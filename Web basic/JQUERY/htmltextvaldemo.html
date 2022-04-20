@@ -1,0 +1,46 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p id="mypara">Welcome to <b>Neosoft Technologies</b>, Mumbai</p>
+        <p id="mypara2"></p>
+        <button class="btn">COPY PASTE</button>
+        <label>Enter your Qualification</label>
+        <input type="text" id="qual" name="qual">
+        <label>Do you need Extra topping?</label>
+        <select id="topping">
+            <option value="yes">YES</option>
+            <option value="no">NO</option>
+        </select>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $('.btn').click(function() {
+                    let contents=$('#mypara').text();
+                    $('#mypara2').html(contents);
+
+                    let newpara=$('<p></p>');
+                    newpara.appendTo($('#bd'));
+                    //$('#bd').append(newpara);
+                    newpara.attr({'id':'mypara3', 'class':'paragraph'});
+                    console.log(newpara);
+                });
+                $("#qual").keyup(function() {
+                    let qualif=$(this).val();  //this: current element where event is occuring
+                    console.log(qualif);
+                });
+
+                let choose=$('#topping').val();
+                console.log(choose);
+                $('#topping').change(()=> console.log($('#topping').val()));
+            });
+        </script>
+    </body>
+</html>

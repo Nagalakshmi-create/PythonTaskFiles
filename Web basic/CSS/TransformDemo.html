@@ -1,0 +1,53 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .block {
+                height: 100px;
+                width: 100px;
+                background: violet;
+                border: 4px solid yellowgreen;
+                border-left-color:aqua ;
+                border-right-color: brown;
+                transition: 6s;
+            }
+            #block1:hover {
+                transform: translate(700px, 300px);  /*translateX(value), translateY(value)*/
+            }
+            #block2:hover {
+                transform: rotateY(-50deg);   /*translateX(angle),  translate(angle)*/
+            } 
+            #block3, #block4 {
+                position: relative;
+                left: 500px;
+            }
+            #block3:hover {
+                transform: scale(2);   /*scalex(value), scaleY(value),  try with -ve also
+                     scale(value1, value2) or  scale(value)*/
+            }
+            #block4:hover {
+                transform: skewX(30deg);   /*skewX(value), skewY(value),  skew(v, X)*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block" id="block1">
+            India is my country
+        </div>
+        <div class="block" id="block2">
+            India is my country
+        </div>
+        <div class="block" id="block3">
+            India is my country
+        </div>
+        <div class="block" id="block4">
+            India is my country
+        </div>
+    </body>
+</html>

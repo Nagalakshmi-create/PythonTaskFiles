@@ -1,0 +1,108 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <details>
+            <summary>Sivaji Maharaj</summary>
+            <p>
+                Shivaji Bhonsale I, also referred to as Chhatrapati Shivaji, was an Indian ruler 
+                and a member of the Bhonsle Maratha clan. Shivaji carved out an enclave from the declining 
+                Adilshahi sultanate of Bijapur that formed the genesis of the Maratha Empire. 
+            </p>
+            <p>
+                Shivaji Bhonsale I, also referred to as Chhatrapati Shivaji, was an Indian ruler 
+                and a member of the Bhonsle Maratha clan. Shivaji carved out an enclave from the declining 
+                Adilshahi sultanate of Bijapur that formed the genesis of the Maratha Empire. 
+                <details>
+                    <summary>Chhatrapati Shivaji</summary>
+                    <p>
+                        Chhatrapati Shivaji was one of the bravest, most progressive and sensible rulers of India. 
+                        The founder of the Maratha Kingdom, Shivaji was ...
+                    </p>
+                </details>
+            </p>
+            <p>
+                Shivaji Bhonsale I, also referred to as Chhatrapati Shivaji, was an Indian ruler 
+                and a member of the Bhonsle Maratha clan. Shivaji carved out an enclave from the declining 
+                Adilshahi sultanate of Bijapur that formed the genesis of the Maratha Empire. 
+            </p>
+        </details>
+        <label>Select your state</label>
+        <select name="states" id="state">
+             <option value="ker">Kerala</option>
+             <option value="mah">Maharastra</option>
+             <option value="ap">Andhta Pradesh</option>
+             <option value="tel">Telangana</option>
+             <option value="har">Hariyana</option>
+        </select>
+        <datalist name="mystates" id="Indiastate">
+            <option value="ker">Kerala</option>
+             <option value="mah">Maharastra</option>
+             <option value="ap">Andhta Pradesh</option>
+             <option value="tel">Telangana</option>
+             <option value="har">Hariyana</option>
+        </datalist>
+        <datalist id="flvlist">
+            <option value="vanilla">
+            <option value="Butterscotch">
+            <option value="Mango">
+            <option value="Strawberry">
+            <option value="Grape">
+        </datalist>
+        Choose state: <input list="Indiastate" id="stlist">
+        Choose Falvour: <input list="flvlist" id="flavor">
+        <figure>
+            <img src="My Images/wp3990010.jpg" height="150" width="150">
+            <figcaption>Sachin Tendulkar</figcaption>
+            <img src="My Images/teahub.io-nature-wallpaper-hd-for-106526.png" height="150" width="150">
+            <figcaption>Nature Photo</figcaption>
+        </figure>
+        <form>
+            <label>Enter your name: <input type="text" id="myname" onblur="upcase.value=(myname.value).toUpperCase()"></label>
+            <label>Result is: </label><output id="upcase"></output>
+        </form>
+        <hr>
+        <form>
+            <label>Enter first name: <input type="text" id="fname" onkeyup="upcase_fname.value=(fname.value).toUpperCase()"></label>
+            <label>Result is: </label><output id="upcase_fname"></output>
+            <label>Enter last name: <input type="text" id="lname" onkeyup="upcase_lname.value=(lname.value).toUpperCase()"></label>
+            <label>Result is: </label><output id="upcase_lname"></output>
+        </form>
+        <hr>
+        <form oninput="my_upcase_fname.value=(my_fname.value).toUpperCase();my_upcase_lname.value=(my_lname.value).toUpperCase()">
+            <label>Enter first name: <input type="text" id="my_fname"></label>
+            <label>Result is: </label><output id="my_upcase_fname"></output>
+            <label>Enter last name: <input type="text" id="my_lname"></label>
+            <label>Result is: </label><output id="my_upcase_lname"></output>
+        </form>
+        <hr>
+        <form oninput="result.value=parseFloat(num1.value)+parseFloat(num2.value)">
+            <label>Enter first number: <input type="number" id="num1"></label>
+            <label>Enter second number: <input type="number" id="num2"></label>
+            <label>Result is: </label><output id="result"></output>
+        </form>
+        <label>Fuel Indicator</label>
+        <meter min="0" low="40" value="150" high="170" max="200"></meter>  <!--JavaScript:  dynamically we will change value of tag-->
+        <!-- If value between: (min and <low) -> warning sign
+             If value between : (>high and max) -> warning sign-->
+             <meter min="0" low="40" value="39" optimum=" 185" high="170" max="200"></meter> 
+             <!--  if optimum is btwn high and max then higher range is safer
+                        if value is between high and max  :  safer value
+                        if value is between low and <high  :  warning
+                        if value is between min and <low  :  danger  
+            -->
+            <meter min="0" low="40" optimum="22" value="180" high="170" max="200"></meter> 
+            <!--  if optimum is btwn low and min  then higher range is safer
+                        if value is between low and min  :  safer value
+                        if value is between high and >low  :  warning
+                        if value is between max and >high  :  danger  
+            -->
+    </body>
+</html>

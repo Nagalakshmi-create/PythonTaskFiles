@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>canvas</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            canvas {
+                border: 4px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The canvas element</h1>
+        <canvas id="myCanvas">Your browser does not support the canvas tag</canvas>
+        <script>
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+            ctx.fillStyle="#FF0000";
+            ctx.fillRect(10, 10, 150, 80);
+        </script><br><br>
+        <canvas id="myCanvas1">Your browser does not support the canvas tag</canvas>
+        <script>
+            var c = document.getElementById("myCanvas1");
+            var ctx = c.getContext("2d");
+            ctx.strokeStyle="green";
+            ctx.arc(100, 75, 50, 0, 1 * Math.PI);
+            ctx.stroke();
+        </script> <br><br>
+        <canvas id="myCanvas2"></canvas>
+        <script>
+            var c=document.getElementById("myCanvas2");
+            var ctx=c.getContext("2d")
+            
+            ctx.ellipse(100, 100, 40, 75, Math.PI / 2, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>  <br><br>
+        <canvas id="myCanvas3"></canvas>
+        <script>
+            var c=document.getElementById("myCanvas3");
+            var ctx=c.getContext("2d");
+            ctx.font="30px Arial";
+            ctx.fillText("Hello World", 10,50);
+        </script>
+    </body>
+</html>

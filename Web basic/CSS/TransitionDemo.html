@@ -1,0 +1,37 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .block {
+                width: 100px;
+                height: 100px;
+                border: 30px solid red;
+                background: yellow;
+                /* transition-duration: 7s;
+                transition-property: height, background, width;
+                transition-delay: 5s;
+                transition-timing-function: cubic-bezier(1, 0, 0, 1); */
+
+                transition: 6s 3s ease-in;
+                transition: height 3s 2s ease, width 10s 2s ease;
+            }
+            #block1:hover {
+                width: 600px;
+                height: 600px;
+                background: green;
+                border: 1px dotted purple;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="block" id="block1">
+            India is my country
+        </section>
+    </body>
+</html>

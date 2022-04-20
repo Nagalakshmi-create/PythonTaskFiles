@@ -1,0 +1,35 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <label>Choose a pet:</label>
+    <div id="topping">
+        <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">Cat</label> <br>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">Dog</label><br>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+     	<label for="radio-choice-3">Hamster</label><br>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"  />
+     	<label for="radio-choice-4">Lizard</label><br>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function() {
+                let choose=$('#topping').val();
+                console.log(choose);
+                $('#topping').change(()=> console.log($('#topping').val()));
+            })
+        </script>
+    </body>
+</html>

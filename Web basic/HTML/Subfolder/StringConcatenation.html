@@ -1,0 +1,25 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form id="stringform" onsubmit="event.preventDefault();">
+            <h3>String concatenation</h3>
+            <label for="fstring">Enter first string : </label>
+            <input type="text" id="fstring">
+            <br><br>
+            <label for="sstring">Enter second string : </label>
+            <input type="text" id="sstring">
+            <br><br>
+            <input type="submit" value="submit" onclick="result.value=fstring.value+sstring.value">
+        </form>
+        <br>
+        <output id="result"></output>
+    </body>
+</html>

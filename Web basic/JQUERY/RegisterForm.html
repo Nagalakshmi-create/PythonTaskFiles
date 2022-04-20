@@ -1,0 +1,100 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Login Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        label {
+            margin: 10px;
+        }
+        tr>span {
+            color: yellowgreen;
+            font-weight: bold;
+        }
+        #regform {
+            background-color: burlywood;;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            background-color: coral;
+            padding: 10px;
+        }
+        #passtd {
+            color: red;
+        }
+    </style>
+    <body>
+        <section id="regform">
+        <h2>Registration Form</h2>
+        <form action="Success.html" id="rForm" novalidate> 
+            <table>
+                <tr>
+                    <td><label for="fname">Enter first name: </label> </td>
+                    <td><input id="fname" name="name" ></td>
+                </tr>
+                <tr>
+                    <td></td><td><span id="error1"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Enter last name:  </label></td>
+                    <td><input type="text" id="lname" name="name" value="patil" /></td>
+                </tr>
+                <tr>
+                    <td></td><td><span id="error2"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Enter age: </label></td>
+                    <td><input type="number" id="age" name="age"  required/></td>
+                </tr>
+                <tr>
+                    <td></td><td><span id="error3"></span></td>
+                </tr>
+                <tr>
+                    <td><label>Enter Mobile Number: </label></td>
+                    <td><input type="tel" id="telph"  /></td>
+                </tr>
+                <tr>
+                    <td></td><td><span id="error4"></span></td>
+                </tr>
+                <tr>
+                    <td><label>Enter your email id: </label></td>
+                    <td><input type="email" id="emails"  /></td>
+                </tr>
+                <tr>
+                    <td></td><td><span id="error5"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd1">Create Password: </label></td>
+                    <td><input type="password" id="pwd1"  /></td>
+                </tr>
+                <tr>
+                    <td></td><td id="passtd"><span id="error6"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd2">Confirm Password: </label></td>
+                    <td><input type="password" id="pwd2" pattern="[A-Za-z]*" required minlength="4" maxlength="12"  /></td>
+                </tr>
+                <tr><td></td><td><span id="error7"></span></td></tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" id="showp"/><label for="showp">Show Password</label></td>
+                </tr>
+                
+                <tr><td></td><td><input type="submit" value="Register"/>
+                     <input type="reset"/></td></tr>
+            </table>            
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="Library/Validation.js"></script>
+        </form>
+        </body>
+        </html>

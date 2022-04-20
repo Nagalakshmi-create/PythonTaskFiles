@@ -1,0 +1,128 @@
+<!doctype html>      <!--optional-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">     <!--optional-->
+        <meta name="keywords" content="put imp words of ur web page here">
+        <meta name="description" content="put short descriptionnabout ur web page here">
+        <meta name="author" content="put author name of this website here">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="MyCSS/ MyStyle.css" rel="stylesheet">
+        <link href="../HTML/My Images/starimage" rel="icon">
+
+        <style>
+            /*element selector: all matching elements will be selected*/
+            table {
+                border-collapse: collapse;
+            }
+
+            /*element with matchig id is selected. id should be unique */
+            #table1 {
+                width: 700px;
+            }
+            #table2 {
+                width: 100%;
+            }
+            /* class selector: group of elements having dame class are selected*/
+            .firstrow {
+                font-size: 20px;
+                background-color: turquoise;
+                color: blue;
+            }
+            /* select tr elements having class firstrow*/
+            tr.firstrow {
+                border: 4px pink double;
+            }
+            /*select h3 h2 and caption elements to apply same style*/
+            h3,h2,caption {
+                color: darkorange;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS Browser Support</h3>
+        <table border="4" id="table1">
+            <caption>CSS Browser Support</caption>
+            <thead>
+                <tr  class="firstrow">
+                    <th>CSS Property</th>
+                    <th>chrome</th>
+                    <th>FIRE FOX</th>
+                    <th>safari</th>
+                    <th>IE</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Border Radius</th>
+                    <td>YES</td> 
+                    <td>YES</td> 
+                    <td>YES</td> 
+                    <td>YES</td> 
+                    
+                </tr>
+                <tr>
+                    <th>Box shadow</th>
+                    <td>YES</td> 
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>NO</td>
+                    
+                </tr>
+                <tr>
+                    <th>CSS Animations</th>
+                    <td>NO</td>
+                    <td>NO</td> 
+                    <td>YES</td>
+                    <td>NO</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <table border="4" id="table2">
+            <caption>CSS Browser Support</caption>
+            <thead>
+                <tr class="firstrow"> 
+                    <th>CSS Property</th>
+                    <th>chrome</th>
+                    <th>FIRE FOX</th>
+                    <th>safari</th>
+                    <th>IE</th>
+                    <th colspan="2">Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Border Radius</th>
+                    <td colspan="4">YES</td> 
+                    <td><a href="#">More Info....</a></td>
+                    <td><a href="#">example..</a></td>
+                </tr>
+                <tr>
+                    <th>Box shadow</th>
+                    <td>YES</td> 
+                    <td>YES</td>
+                    <td rowspan="2">YES</td>
+                    <td>NO</td>
+                    <td><a href="#">More Info....</a></td>
+                    <td><a href="#">example..</a></td>
+                </tr>
+                <tr>
+                    <th>CSS Animations</th>
+                    <td>NO</td>
+                    <td>NO</td> 
+                    
+                    <td>NO</td>
+                    <td><a href="#">More Info....</a></td>
+                    <td><a href="#">example..</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <ol>
+            <li class="firstrow"><b>Idly</b></li>
+            <li><i>Upma</i></li>
+            <li>Dosa</li>
+        </ol>
+    </body>
+        </html>
