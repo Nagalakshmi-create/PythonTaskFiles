@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, flash, jsonify
 from flask_mysqldb import MySQL,MySQLdb #pip install flask-mysqldb https://github.com/alexferl/flask-mysqldb
  
+ 
 app = Flask(__name__)
        
 app.secret_key = "caircocoders-ednalan"
