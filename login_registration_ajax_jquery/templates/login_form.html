@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<style>
+    fieldset{
+        background-color: #f1f1f1;
+        border: none;
+        border-radius: 2px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        padding: 0 .625em;
+        margin-left: 300px;
+        margin-right: 250px;
+    }
+
+    label{
+        cursor: pointer;
+        display: inline-block;
+        padding: 3px 6px;
+        text-align: right;
+        width: 150px;
+        vertical-align: top;
+    }
+
+    input{
+        font-size: inherit;           
+    }
+    .btn {
+        margin-left: 150px;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+<div>
+    <h2>Login</h2>
+    <div>
+        <form method="POST" action="{{url_for('login_validation')}}" style="height:280px;">
+            <fieldset>
+                <div>
+                    <p>{{ message }}</p>
+                </div>
+
+                <div>
+                    <p class="errmsg">{{ msg }}</p>
+                </div>
+
+                <div style="margin-top:50px;">
+                    <label>Email: </label>
+                    <input type="email" name="email" />
+                    <br/><br/>
+                    <label>Password: </label>
+                    <input type="password" name="password" />
+                    <br/><br/>
+                    <input class="btn" type="submit" value="Submit" />
+                </div>
+                <div style="margin-top: 40px; margin-left: 150px; margin-bottom: 15px;">
+                    <p class="link"> Don't have an account?. <a href="/register/">Register Here</a></p>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+</html>

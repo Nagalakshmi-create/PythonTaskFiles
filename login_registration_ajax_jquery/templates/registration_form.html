@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        fieldset{
+            background-color: #f1f1f1;
+            border: none;
+            border-radius: 2px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            padding: 0 .625em;
+            margin-left: 300px;
+            margin-right: 250px;
+        }
+
+        label{
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: right;
+            width: 150px;
+            vertical-align: top;
+        }
+
+        input{
+            font-size: inherit;           
+        }
+        .btn {
+            margin-left: 120px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <div>
+        <form method="POST" action="{{url_for('add_user')}}">
+            <fieldset>
+            <div>
+                <p>{{ message }}</p>
+            </div>
+
+            <div>
+                <p class="errmsg">{{ msg }}</p>
+            </div>
+
+            <div style="margin-top:50px;">
+                <label>Full Name: </label>
+                <input type="text" name="name" />
+                <br/><br/>
+                <label>Email: </label>
+                <input type="email" name="email" />
+                <br/><br/>
+                <label>Phone.No: </label>
+                <input type="number" name="ph_no" />
+                <br/><br/>
+                <label>Password: </label>
+                <input type="password" name="password" />
+                <br/><br/>
+                <input class="btn" type="submit" value="Submit" />
+            </div>
+
+            <div style="margin-top: 40px; margin-left: 100px; margin-bottom: 15px;">
+                
+                <p class="link">Already member. <a href="/">Login Here.</a></p>
+            </div>
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
