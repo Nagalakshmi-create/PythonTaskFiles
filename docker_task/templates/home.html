@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h2>Please give your feedback</h2>
+    
+    <form action="{{url_for('text')}}" method="POST">
+        Feedback
+        <input type="text" name="text" id="text-box">
+        <br/><br/>
+        <input type="submit" value="submit" id="submit">
+        <br/><br/>
+    </form>
+
+    <h1 class="output">
+        {{value}}
+    </h1>
+
+<script>
+    document.getElementById("text-box").addEventListener("click", function(event){
+          event.preventDefault()
+    });
+</script>
+
+</body>
+
+</html>
+
+</html>
+

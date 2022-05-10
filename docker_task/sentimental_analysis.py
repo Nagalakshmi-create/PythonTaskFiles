@@ -1,0 +1,64 @@
+import os
+
+from flask import Flask, render_template, request
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+
+def emotion_score(sentence):
+    """
+    Receives user text as an input and returns emotion and score.
+    
+        Parameters:
+            sentence (str): text 
+        
+        Return type:
+            message (str): emotion and score
+    """
+    # Creating a SentimentIntensityAnalyzer object.
+    sia_obj = SentimentIntensityAnalyzer()
+
+    # sentiment dictionary contains 4 classes of sentiments which are:
+    # neg: Negative, neu: Neutral, pos: Positive
+    # and compound: Compound (i.e. aggregated score)
+    sentiment_dict = sia_obj.polarity_scores(sentence)
+    print(sentiment_dict)
+
+    # decides sentiment as positive, negative and neutral based on the compound value
+    if sentiment_dict['compound'] >= 0.05:
+        emotion = "Positive"
+    elif sentiment_dict['compound'] <= -0.05:
+        emotion = "negative"
+    else:
+        emotion = "neutral"
+
+    message = emotion + " " + str(sentiment_dict['compound'])
+    return message
+
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    """This displays the code written in html file."""
+    return render_template('home.html')
+
+
+@app.route('/text', methods=['GET', 'POST'])
+def text():
+    """The user entered text is received when the user clicks on the submit button
+    and stores in the text variable and the value in the variable is passed as an 
+    argument to the emotion_score() function and this function returns emotion and score value.
+        
+    Return type:
+        sentiment (str): emotion and score
+    """
+    # In form[text] text is the value of the name attribute of an input text element
+    text = request.form['text']
+    sentiment = emotion_score(text)
+    return render_template('home.html', value=sentiment)
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
