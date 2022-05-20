@@ -22,8 +22,6 @@ drive.mount('/content/drive')
 
 !python mask_data_yolov3/creating-train-and-test-txt-files.py
 
-!ls
-
 %cd /content/drive/MyDrive/yolov3_mask_dataset/darknet
 
 !ls
