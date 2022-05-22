@@ -24,7 +24,7 @@ height, width, _ = image.shape
 # convert the images list into an OpenCV-compatible blob
 blob = cv2.dnn.blobFromImage(image, 1/255, (416,416),(0,0,0),swapRB = True, crop = False) 
 
-blob.shape
+print(blob.shape)
 
 #blob object is given as input to the network
 net.setInput(blob)
@@ -38,11 +38,11 @@ net.setInput(blob)
 last_layer = net.getUnconnectedOutLayersNames()
 
 layer_out = net.forward(last_layer)
-layer_out
+print(layer_out)
 
-layer_out[0].shape
+print(layer_out[0].shape)
 
-layer_out[0][0]
+print(layer_out[0][0])
 
 boxes =[]
 confidences = []
@@ -69,7 +69,7 @@ for output in layer_out:
             class_ids.append(class_id)
             
 indexes = cv2.dnn.NMSBoxes(boxes, confidences,.5,.4)
-indexes
+print(indexes)
 
 font = cv2.FONT_HERSHEY_PLAIN 
 colors = np.random.uniform(0,255,size = (len(boxes),3))
