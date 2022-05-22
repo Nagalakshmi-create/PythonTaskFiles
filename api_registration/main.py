@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
 import sqlite3 as sql
 
@@ -10,16 +10,19 @@ conn.cursor()
 
 @app.route('/')
 def home():
+    ''' It displays links for login and registration pages '''
     return render_template('home.html')
 
 
 @app.route('/enter')
 def new():
+    ''' It diaplays form for registration '''
     return render_template('new.html')
 
 
 @app.route('/add', methods=['POST', 'GET'])
 def add():
+    ''' It adds user to the database if there is no error otherwise it shows error message '''
     if request.method == 'POST':
         try:
             name = request.form['name']
@@ -43,11 +46,14 @@ def add():
 
 @app.route('/login')
 def login():
+    ''' It displays login page to login '''
     return render_template('login.html')
 
 
 @app.route('/check',methods=['POST', 'GET'])
 def check():
+    ''' It checks whether the user has an account or not. If the account is exists it displays
+        Neosoft home page else it diaplays registration page to register '''
     name = request.form['name']
     password = request.form['pwd']
 
@@ -61,4 +67,4 @@ def check():
     con.close()
 
 
-app.run()
+app.run(debug = True)
