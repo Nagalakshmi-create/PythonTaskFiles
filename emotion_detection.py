@@ -11,4 +11,4 @@ plt.show()
 
 result = DeepFace.analyze(img,actions=['emotion'])
 #print(result)
-result['dominant_emotion']
+print(result['dominant_emotion'])
