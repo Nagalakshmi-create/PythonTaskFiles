@@ -15,7 +15,6 @@ image = cv2.imread('/home/neosoft/Downloads/yolo_mask_dataset/face_data/test/cro
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 plt.imshow(image)
 
-image = cv2.imread('/home/neosoft/Downloads/yolo_mask_dataset/face_data/test/crowd_mask65.jpg')
 image = cv2.resize(image,(1280,720))
 
 height, width, _ = image.shape
