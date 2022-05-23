@@ -29,7 +29,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 y_pred = classifier.predict(x_test)
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
-accuracy_score(y_test, y_pred)
+print(accuracy_score(y_test, y_pred))
 
 #Applying k-Fold Cross Validation
 from sklearn.model_selection import cross_val_score
