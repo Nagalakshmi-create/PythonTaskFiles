@@ -1,6 +1,4 @@
 #importing libraries
-!pip install deepface
-
 import cv2
 import matplotlib.pyplot as plt
 from deepface import DeepFace
