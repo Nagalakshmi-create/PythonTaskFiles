@@ -28,10 +28,6 @@ print(blob.shape)
 #blob object is given as input to the network
 net.setInput(blob)
 
-#yOLOv3 has 3 output layers (82, 94 and 106) as the figure shows.
-
-#getLayerNames(): Get the name of all layers of the network.
-
 #getUnconnectedOutLayers(): Get the index of the output layers.
     
 last_layer = net.getUnconnectedOutLayersNames()
