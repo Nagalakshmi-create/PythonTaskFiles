@@ -87,6 +87,7 @@ lstm_model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(20, activation='tanh'),
     tf.keras.layers.Dense(20, activation='tanh'),
     tf.keras.layers.Dropout(0.25),
+  #The forecast horizon is the length of time into the future for which forecasts are to be prepared
     tf.keras.layers.Dense(units=horizon),
 ])
 lstm_model.compile(optimizer='adam', loss='mse')
