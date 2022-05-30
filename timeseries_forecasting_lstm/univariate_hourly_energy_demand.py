@@ -9,7 +9,6 @@ from keras.layers import LSTM
 from keras.layers import Dropout
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
-import seaborn as sns
 
 df = pd.read_csv("/home/neosoft/Downloads/energy_dataset.csv")
 
