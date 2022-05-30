@@ -11,17 +11,12 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 
 df = pd.read_csv("/home/neosoft/Downloads/energy_dataset.csv")
-
-print(df.head())
-
 mape = np.mean(np.abs((df['total load actual'] - df['total load forecast']) / df['total load actual'])) * 100
 print('MAPE of the forecasted data present in DataFrame:', mape)
-
 temp = df.copy() # make temporary copy of dataframe
 dataset = temp['total load actual'].dropna().values # numpy.ndarray of the actual load
 dataset = dataset.astype('float32')
 dataset = np.reshape(dataset, (-1, 1)) # reshape to one feature; required for the models
-
 scaler = MinMaxScaler(feature_range=(0, 1))
 dataset = scaler.fit_transform(dataset) # fit and transform the dataset
 
@@ -29,8 +24,6 @@ dataset = scaler.fit_transform(dataset) # fit and transform the dataset
 train_size = int(len(dataset) * 0.80)
 test_size = len(dataset) - train_size
 train, test = dataset[0:train_size,:], dataset[train_size:len(dataset),:]
-print(train, test)
-
 
 def create_dataset(dataset, time_step=1):
     X, Y = [], []
@@ -40,16 +33,15 @@ def create_dataset(dataset, time_step=1):
         Y.append(dataset[i + time_step, 0])
     return np.array(X), np.array(Y)
 
-
 time_step = 25  # timesteps to lookback for predictions
 X_train, Y_train = create_dataset(train, time_step)
 X_test, Y_test = create_dataset(test, time_step)
-
 X_train = np.reshape(X_train, (X_train.shape[0], 1, X_train.shape[1]))
 X_test = np.reshape(X_test, (X_test.shape[0], 1, X_test.shape[1]))
 print("Shapes: \nTraining set: {}, Testing set: {}".format(X_train.shape, X_test.shape))
 print("Sample from training set: \n{}".format(X_train[0]))
 
+#Build the model and compiling
 # Initialising the RNN
 model = Sequential()
 # Adding LSTM layer and some Dropout regularization
@@ -78,7 +70,6 @@ print('Test Root Mean Squared Error for Y_test:',np.sqrt(mean_squared_error(Y_te
 
 mape_train = np.mean(np.abs((Y_train[0] - train_predict[:,0]) / Y_train[0])) * 100
 mape_test = np.mean(np.abs((Y_test[0] - test_predict[:,0]) / Y_test[0])) * 100
-
 print("Train MAPE: {}, Test MAPE: {}".format(mape_train, mape_test))
 
 #visualising loss graph
