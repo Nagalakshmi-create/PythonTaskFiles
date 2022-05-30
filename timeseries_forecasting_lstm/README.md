@@ -1,4 +1,4 @@
-I this task I had done time series forecasting for univariate and multivariate.
+For this task I had done time series forecasting for univariate and multivariate.
 For the univariate I had taken a dataset of Electric power consumed for each hour.
 
 For the multivariate I had taken a dataset of Metro data for prediction of traffic volume for each hour.
